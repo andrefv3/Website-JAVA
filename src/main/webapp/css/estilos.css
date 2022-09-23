@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+#headerP{
+    width: 250px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #181818;
+    padding: 30px;
+    -moz-border-radius: 0 50% / 0 0;
+    -webkit-border-radius: 20% 0 / 0 0;
+    border-radius: 0 0 50% / 90% 0;
+}
+
+#headerP h1{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 30px;
+}
+.card-container {
+    max-width: 350px;
+    padding: 40px 40px;
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 30px 35px 40px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* shadows and rounded borders */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-control{
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.boton{
+    text-align: center;
+}
+
+.enlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn{
+    width: 60%;
+}
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    display: flex;
+    background: #F0F0F0;
+    opacity: 0.4;
+    color: #000;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.spanf{
+    opacity: 1;
+}
+
+body {
+    background: url("../img/fondo.jpg");
+}
+
