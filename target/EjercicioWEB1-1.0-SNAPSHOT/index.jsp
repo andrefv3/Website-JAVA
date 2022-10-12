@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 22 sept 2022, 13:14:08
-    Author     : Andres
+    Author     : Andrés
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -21,7 +21,6 @@
                 <a style="text-decoration: none;" href="./"><h1>Página de Andrés</h1></a>
             </header>
             <div class="card-container">
-                <h1>Ramas con git</h1>
                 <h3><center>FORM</center></h3>        
                 <form action="Control" method="get" id="formul">
                     <div class="form-group">
@@ -43,16 +42,8 @@
             </div>
         
             <div class="footer">
-                <span class="spanf">Andrés Felipe Vega — 20201578113 || Juan Esteban Sanchez</span>
+                <span class="spanf">Andrés Felipe Vega — 20201578113</span>
             </div>
         </div>
-        
-        <script>
-            $(document).ready(function() {
-                $('#btnEnvio').click(function() {
-                    $('input[type="text"]').val('');
-                });
-            });
-        </script>
     </body>
 </html>
