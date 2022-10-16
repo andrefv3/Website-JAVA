@@ -4,9 +4,17 @@
         <servlet-name>Control</servlet-name>
         <servlet-class>com.mycompany.ejercicioweb.Control</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>com.mycompany.ejercicioweb1.Servlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Control</servlet-name>
         <url-pattern>/Control</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/Servlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
