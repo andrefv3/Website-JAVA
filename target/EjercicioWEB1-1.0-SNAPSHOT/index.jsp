@@ -17,7 +17,7 @@
         <link rel="icon" href="img/favicon.ico";>
         <title>Principal</title>
     </head>
-    <body id="page" oncontextmenu='return false' onkeydown='return false'>
+    <body id="page">
         <div id="main">
             <header id="headerP">
                 <a style="text-decoration: none;" href="./"><h1>Página de Andrés</h1></a>
