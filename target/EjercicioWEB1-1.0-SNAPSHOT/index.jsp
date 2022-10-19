@@ -10,6 +10,7 @@
     <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content= "width=device-width, user-scalable=no">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/estilos.css">
@@ -30,7 +31,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputText">Telefono:</label>
-                        <input class="form-control" type="text" name="txt_telefono" 
+                        <input class="form-control" type="tel" name="txt_telefono" 
                             onkeypress="return valideKey(event);" minlength="8" maxlength="10" required/>
                     </div>
                     <div class="form-group">
@@ -50,10 +51,12 @@
                     <a href="Servlet">Verificar servlet objeto response</a>
                 </center>
             </div>
-        
-            <footer class="footer">
-                <span class="spanf">Andrés Felipe Vega — 20201578113</span>
-            </footer>
+            
+            <div class="cjFooter">
+                <footer class="footer">
+                    <span class="spanf">Andrés Felipe Vega — 20201578113</span>
+                </footer>
+            </div>
         </div>
         
         <script>
