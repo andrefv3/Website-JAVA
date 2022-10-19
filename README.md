@@ -9,6 +9,7 @@ El siguiente proyecto consiste en la implementación de un aplicativo WEB utiliz
  **———>** TOMCAT 9.0 (Servidor)  
  **———>** Heroku (Servicio en la nube)  
  **———>** Java Servlet (Servicios)
+ **———>** PostgreSQL (Base de datos SQL)
  
  -------------------------------------------
  ***CLONACIÓN DE REPOSITORIO***  
