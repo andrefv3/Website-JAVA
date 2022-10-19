@@ -18,7 +18,7 @@
         <title>Principal</title>
     </head>
     <body id="page">
-        <div id="main">
+        <div id="main" style="height: 100%;">
             <header id="headerP">
                 <a style="text-decoration: none;" href="./"><h1>Página de Andrés</h1></a>
             </header>
@@ -50,15 +50,12 @@
                 <center>
                     <a href="Servlet">Verificar servlet objeto response</a>
                 </center>
-            </div>
-            
-            <div class="cjFooter">
-                <footer class="footer">
-                    <span class="spanf">Andrés Felipe Vega — 20201578113</span>
-                </footer>
-            </div>
+            </div> 
+            <div class="separador"></div>
+            <footer class="footer">
+                <span class="spanf">Andrés Felipe Vega — 20201578113</span>
+            </footer>
         </div>
-        
         <script>
             //=== VALIDACIONES ===
             
