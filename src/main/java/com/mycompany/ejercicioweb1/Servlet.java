@@ -51,7 +51,7 @@ public class Servlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<meta name='viewport' content='width=device-width; initial-scale=1.0'/>");
+            out.println("<meta name='viewport' content='width=device-width; initial-scale=1.0' user-scalable=no/>");
             out.println("<script>$document.oncontextmenu= new Function('return false'); </script>");
             out.println("<style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');"
                     + "@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');"
@@ -102,13 +102,14 @@ public class Servlet extends HttpServlet {
                     "<meta charset='UTF-8'/>" +
                     "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>" +
                     "<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap' rel='stylesheet'>");
+            out.println("<meta name='viewport' content='width=device-width; initial-scale=1.0' user-scalable=no/>");
             out.println("<style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');"
                     + "@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');"
                     + "@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap'); "
                     + "h1,h2,h3{font-family: 'Poppins', sans serif; color: #3d3d3d; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}body {background: #e0e0e0;}"
                     + ".container {vertical-align: middle; display: inline-block; text-align: center; width: 30rem; height: 20rem; box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);"
                     + "border-radius: 15px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0 auto; z-index: 1; background: inherit; overflow: hidden;"
-                    + "</style>");
+                    + "@media only screen and (max-device-width: 768px){.encabezado{font-size: 50px;} .titulo{margin-top: 100px;}} </style>");
             out.println("</head>");
             out.println("<body oncontextmenu='return false' onkeydown='return false'>");
             out.println("<div class='titulo' style='width: 100%; margin: 0; margin-top: 30px; display: flex; justify-content: center; align-items: center; text-align: center;'>");
@@ -120,7 +121,7 @@ public class Servlet extends HttpServlet {
             out.println("<h2 class='info' style='font-size: 19px;'>Email: " + e + "</h2>");
             out.println("</div>");
             out.println("<img class='img' draggable='false' src='https://techfut.000webhostapp.com/3dos.png' width='500' height='500' style='position: absolute; bottom: 0; right: 0; pointer-events: none;'/>");
-            out.println("<style>@media only screen and (min-device-width: 1860px){ .img{width: 600px; height: 600px;} h1{font-size: 60px;} .container{width: 40rem; height: 25rem;} .info{font-size: 25px;}</style>");
+            out.println("<style>@media only screen and (min-device-width: 1860px){ .img{width: 600px; height: 600px;} h1{font-size: 60px;} .container{width: 40rem; height: 25rem;} .info{font-size: 25px;}}</style>");
             out.println("</body>");
             out.println("</html>");
         }
