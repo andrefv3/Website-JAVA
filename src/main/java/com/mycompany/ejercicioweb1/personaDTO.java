@@ -2,7 +2,11 @@
 
 package com.mycompany.ejercicioweb1;
 
-public class personaDTO {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class personaDTO implements Serializable{
+    
     private String Nombre;
     private int Telefono;
     private String Email;
@@ -53,5 +57,45 @@ public class personaDTO {
     public void setPassword(String Password) {
         this.Password = Password;
     }
+
+    @Override
+    public String toString() {
+        return "personaDTO{" + "Nombre=" + Nombre + ", Telefono=" + Telefono + ", Email=" + Email + ", Password=" + Password + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 19 * hash + Objects.hashCode(this.Nombre);
+        hash = 19 * hash + this.Telefono;
+        hash = 19 * hash + Objects.hashCode(this.Email);
+        hash = 19 * hash + Objects.hashCode(this.Password);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final personaDTO other = (personaDTO) obj;
+        if (this.Telefono != other.Telefono) {
+            return false;
+        }
+        if (!Objects.equals(this.Nombre, other.Nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.Email, other.Email)) {
+            return false;
+        }
+        return Objects.equals(this.Password, other.Password);
+    }
+    
     
 }
