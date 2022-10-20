@@ -9,6 +9,8 @@ import java.sql.SQLException;
 
 public class Conexion {
     
+    private static Conexion conex;
+    
     private Connection conectar;
     private String BD;
     private String usuario;
@@ -23,9 +25,16 @@ public class Conexion {
 
     public Conexion() {
         this.conectar = null;
-        this.BD = "";
-        this.usuario = "";
-        this.contra = "";
+        this.BD = "bd_vega";
+        this.usuario = "postgres";
+        this.contra = "123456";
+    }
+    
+    public synchronized static Conexion getConexion() {
+        if (conex == null) {
+           conex = new Conexion();
+        }
+       return conex;
     }
     
     public void conectar(){

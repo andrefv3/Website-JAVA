@@ -57,7 +57,7 @@ public class personaDTO implements Serializable{
     public void setPassword(String Password) {
         this.Password = Password;
     }
-
+    
     @Override
     public String toString() {
         return "personaDTO{" + "Nombre=" + Nombre + ", Telefono=" + Telefono + ", Email=" + Email + ", Password=" + Password + '}';
