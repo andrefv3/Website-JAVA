@@ -4,6 +4,7 @@ package com.mycompany.ejercicioweb1;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,6 +40,9 @@ public class Servlet extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
+        
+        personaDAO dao = new personaDAO();
+        List<personaDTO> lista = dao.readAll();
     }
 
     @Override
