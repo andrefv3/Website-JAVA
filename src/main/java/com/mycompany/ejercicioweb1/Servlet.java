@@ -129,6 +129,12 @@ public class Servlet extends HttpServlet {
             out.println("<style>@media only screen and (min-device-width: 1860px){ .img{width: 600px; height: 600px;} h1{font-size: 60px;} .container{width: 40rem; height: 25rem;} .info{font-size: 25px;}}</style>");
             out.println("</body>");
             out.println("</html>");
+            
+            personaDAO dao=new personaDAO();
+            List<personaDTO> lista= dao.readAll();
+            for(personaDTO i : lista){
+                System.out.println(i.toString());
+            }
         }
     }
 
