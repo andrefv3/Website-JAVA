@@ -1,2 +1,4 @@
 com\mycompany\ejercicioweb1\Servlet.class
+com\mycompany\ejercicioweb1\personaDAO.class
+com\mycompany\ejercicioweb1\Conexion.class
 com\mycompany\ejercicioweb1\personaDTO.class
