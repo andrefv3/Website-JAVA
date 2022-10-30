@@ -21,9 +21,10 @@ public class Servlet extends HttpServlet {
         
         response.setContentType("text/html;charset=UTF-8");
 
-        String n = request.getParameter("txt_nombres");
+        String n = request.getParameter("txt_nombre");
         String t = request.getParameter("txt_telefono");
         String e = request.getParameter("txt_email");
+        String p = request.getParameter("txt_pass");
 
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -93,10 +94,13 @@ public class Servlet extends HttpServlet {
         //processRequest(request, response);
         response.setContentType("text/html;charset=UTF-8");
 
-        String n = request.getParameter("txt_nombres");
+        String n = request.getParameter("txt_nombre");
         String t = request.getParameter("txt_telefono");
         String e = request.getParameter("txt_email");
+        String p = request.getParameter("txt_pass");
 
+        String accion = (String) request.getParameter("btn_registrar");
+        
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -131,10 +135,26 @@ public class Servlet extends HttpServlet {
             out.println("</html>");
         }
         
-        personaDAO dao=new personaDAO();
+        personaDAO dao = new personaDAO();
         List<personaDTO> lista= dao.readAll();
         for(personaDTO i : lista){
             System.out.println(i.toString());
+        }
+        
+        personaDTO objpersona;
+        
+        if (accion.equals("btn_registrar")) {
+            //Registro exitoso
+            String Nombre = request.getParameter("txt_nombre");
+            String Email = request.getParameter("txt_email");
+            int Telefono = request.getIntHeader("txt_telefono");
+            String Password = request.getParameter("txt_pass");
+            objpersona = new personaDTO(Nombre, Telefono, Email, Password);
+            System.out.println(objpersona);
+            if (dao.insertar(objpersona)) {
+                request.setAttribute("exito", "Cuenta registrada con exito");
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
         }
     }
 

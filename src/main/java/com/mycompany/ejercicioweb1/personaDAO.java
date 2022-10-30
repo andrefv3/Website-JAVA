@@ -5,6 +5,7 @@ package com.mycompany.ejercicioweb1;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,5 +37,48 @@ public class personaDAO {
             System.out.println("Error al conectar: " + ex);
         }
         return lista;
+    }
+    
+    public boolean insertar(personaDTO objP) {
+        boolean verificar = false;
+        String sql = "INSERT INTO tb_persona (Nombre, Telefono, Email, Password) VALUES('" + objP.getNombre()
+                + "','" + objP.getTelefono() + "','" + objP.getEmail() + "','" + objP.getPassword() + "')";
+
+        try {
+            Statement ps;
+            ps = con.getConectar().createStatement();
+            ps.executeUpdate(sql);
+
+            verificar = true;
+
+        } catch(SQLException ex) {
+            System.out.println("Error al conectar: " + ex);
+            verificar = false;
+        }
+        
+       return verificar;
+    }
+
+    public personaDTO consultar(String nombre, String pass) {
+        personaDTO objpersona = new personaDTO();
+        String sql = "SELECT * FROM tb_persona WHERE Nombre='" + nombre + "' AND Password='" + pass + "'";
+        PreparedStatement ps;
+        try {
+            ps = con.getConectar().prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                if (rs.getString("Nombre").equals(nombre) && rs.getString("Password").equals(pass)) {
+                    objpersona.setNombre(rs.getString("Nombre"));
+                    objpersona.setTelefono(rs.getInt("Telefono"));
+                    objpersona.setEmail(rs.getString("Email"));
+                    objpersona.setPassword(rs.getString("Password"));
+                }
+            }
+
+        } catch (SQLException ex) {
+            System.out.println("Error al conectar: " + ex);
+        }
+        
+        return objpersona;
     }
 }

@@ -27,12 +27,12 @@
                 <form action="Servlet" method="post" id="formul" class="needs-validation">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Nombres:</label>
-                        <input type="text" class="form-control" minlength="3" maxlength="18" name="txt_nombres" required/>
+                        <input type="text" class="form-control" minlength="3" maxlength="18" name="txt_nombre" required/>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputText">Telefono:</label>
                         <input class="form-control" type="tel" name="txt_telefono" 
-                            onkeypress="return valideKey(event);" minlength="8" maxlength="10" required/>
+                            onkeypress="return valideKey(event);" minlength="7" maxlength="10" required/>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Correo electrónico:</label>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contraseña:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" required/>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="txt_pass" required/>
                     </div>
                     <div class="boton">
                         <input class="btn btn-primary" id="btnEnvio" type="submit" name="btn_registrar" value="Registrar"/>
