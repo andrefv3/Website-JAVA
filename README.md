@@ -1,8 +1,6 @@
 # Ejercicio — JAVA WEB
 El siguiente proyecto consiste en la implementación de un aplicativo WEB utilizando JAVA MAVEN con SERVLETS
 
-**--> DEMO:** https://clase7921.herokuapp.com/  
-
 **========= HERRAMIENTAS UTILIZADAS =========**
 
  **———>** MAVEN (Apache Maven)  
