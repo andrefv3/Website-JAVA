@@ -11,7 +11,7 @@ El siguiente proyecto consiste en la implementación de un aplicativo WEB utiliz
  
  -------------------------------------------
  ***CLONACIÓN DE REPOSITORIO***  
- * $ git clone https://github.com/andres345/EjercicioWEB-1
+ * $ git clone https://github.com/andrefv3/EjercicioWEB-1
  * $ cd EjercicioWEB-1
  
 **-> Solucionar los errores de clonado**  
