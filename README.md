@@ -11,8 +11,8 @@ El siguiente proyecto consiste en la implementación de un aplicativo WEB utiliz
  
  -------------------------------------------
  ***CLONACIÓN DE REPOSITORIO***  
- * $ git clone https://github.com/andrefv3/EjercicioWEB-1
- * $ cd EjercicioWEB-1
+ * $ git clone https://github.com/andrefv3/Website-JAVA
+ * $ cd Website-JAVA
  
 **-> Solucionar los errores de clonado**  
 
